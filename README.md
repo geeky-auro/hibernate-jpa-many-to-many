@@ -76,3 +76,13 @@ CREATE TABLE `review` (
 
 ### Some Extra Stuffs (How Adding of Insertion works behind the Scene)
 ![img.png](img.png)
+
+~~~
+
+TypedQuery<Student> query=entityManager.createQuery(
+                "select s from Student s "+ "JOIN FETCH s.courses "+"where s.id=:data", Student.class
+        );
+
+        query.setParameter("data",theId);
+~~~
+![img_2.png](img_2.png)

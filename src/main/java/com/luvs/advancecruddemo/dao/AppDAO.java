@@ -3,6 +3,7 @@ package com.luvs.advancecruddemo.dao;
 import com.luvs.advancecruddemo.entity.Course;
 import com.luvs.advancecruddemo.entity.Instructor;
 import com.luvs.advancecruddemo.entity.InstructorDetail;
+import com.luvs.advancecruddemo.entity.Student;
 
 import java.util.List;
 
@@ -34,6 +35,10 @@ public interface AppDAO {
     void save(Course theCourse);
 
     Course findCourseAndReviewsByCourseId(int theId);
+
+    Course findCourseAndStudentsByCourseId(int theId);
+
+    Student findStudentAndCoursesByStudentId(int theId);
 
 
 }
