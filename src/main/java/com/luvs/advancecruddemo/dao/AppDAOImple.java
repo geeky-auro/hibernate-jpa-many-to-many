@@ -182,4 +182,14 @@ public class AppDAOImple implements AppDAO{
     public void update(Student tempStudent) {
         entityManager.merge(tempStudent);
     }
+
+    @Override
+    @Transactional
+    public void deleteStudentById(int theId) {
+        // retireve the student
+        Student tempStudent=entityManager.find(Student.class,theId);
+        // delete the student
+        entityManager.remove(tempStudent);
+
+    }
 }
