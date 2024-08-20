@@ -25,8 +25,8 @@ public class AdvancecruddemoApplication {
 
 //			findStudentAndCourses(appDAO);
 //			addMoreCoursesForStudent(appDAO);
-
-
+			// deletes the course and course_student and doesn;t delete student records
+			deleteCourse(appDAO);
 		};
 
 
